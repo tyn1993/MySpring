@@ -2,6 +2,8 @@ package com.lagou.edu.service.impl;
 
 import com.lagou.edu.annotation.Service;
 import com.lagou.edu.annotation.Transaction;
+import com.lagou.edu.annotationModify.MyService;
+import com.lagou.edu.annotationModify.MyTransactional;
 import com.lagou.edu.dao.AccountDao;
 import com.lagou.edu.pojo.Account;
 import com.lagou.edu.service.TransferService;
@@ -11,8 +13,8 @@ import com.lagou.edu.utils.TransactionManager;
 /**
  * @author 应癫
  */
-@Transaction
-@Service
+@MyService("transferService")
+@MyTransactional
 public class TransferServiceImpl implements TransferService {
 
     //private AccountDao accountDao = new JdbcAccountDaoImpl();

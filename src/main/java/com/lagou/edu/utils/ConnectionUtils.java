@@ -1,11 +1,14 @@
 package com.lagou.edu.utils;
 
+import com.lagou.edu.annotationModify.MyComponent;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
  * @author 应癫
  */
+@MyComponent
 public class ConnectionUtils {
 
     /*private ConnectionUtils() {
