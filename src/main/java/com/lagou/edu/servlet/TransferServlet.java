@@ -1,5 +1,6 @@
 package com.lagou.edu.servlet;
 
+import com.lagou.edu.factory.BeanFactory;
 import com.lagou.edu.factory.BeanFactoryForAnnotationAndXMl;
 import com.lagou.edu.factory.BeanFactoryForXML;
 import com.lagou.edu.factory.ProxyFactory;
@@ -30,7 +31,7 @@ public class TransferServlet extends HttpServlet {
     // 首先从BeanFactory获取到proxyFactory代理工厂的实例化对象
 //    private ProxyFactory proxyFactory = (ProxyFactory) BeanFactoryForXML.getBean("proxyFactory");
 //    private TransferService transferService = (TransferService) proxyFactory.getJdkProxy(BeanFactoryForXML.getBean("transferService")) ;
-    private TransferService transferService = (TransferService) BeanFactoryForAnnotationAndXMl.getBean("transferService");
+    private TransferService transferService = (TransferService) BeanFactory.getBean("transferService") ;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
